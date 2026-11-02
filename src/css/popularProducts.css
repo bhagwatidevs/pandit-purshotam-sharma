@@ -1,0 +1,558 @@
+/* =========================================
+   POPULAR PRODUCTS SECTION
+========================================= */
+
+.popular-products-section {
+  width: 100%;
+  padding: 80px 40px 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.popular-products-heading {
+  width: 100%;
+  text-align: center;
+}
+
+.popular-products-title {
+  margin: 0;
+  color: #222222;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.popular-products-divider {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 40px auto;
+  object-fit: contain;
+}
+
+.popular-products-description {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  color: #555555;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* =========================================
+   PRODUCTS GRID
+========================================= */
+
+.popular-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.popular-product-card {
+  position: relative;
+  min-width: 0;
+  padding: 16px;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+
+  transition: box-shadow 0.4s ease;
+}
+
+.popular-product-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* =========================================
+   NEW BADGE
+========================================= */
+
+.popular-product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 4px;
+
+  background-color: #fb923c;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.popular-product-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 150px;
+  overflow: hidden;
+}
+
+.popular-product-image {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.popular-product-no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 150px;
+
+  color: #9ca3af;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* =========================================
+   ADD TO CART OVERLAY
+========================================= */
+
+.popular-product-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+.popular-product-card:hover .popular-product-overlay,
+.popular-product-card:focus-within .popular-product-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Cart Button */
+
+.popular-product-cart-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+
+  background: linear-gradient(135deg, #fb923c, #ea580c);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.popular-product-cart-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #f97316, #c2410c);
+}
+
+.popular-product-cart-button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   PRODUCT DETAILS
+========================================= */
+
+.popular-product-details {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Star Rating */
+
+.popular-product-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 8px;
+}
+
+.popular-product-star {
+  color: #facc15;
+  font-size: 15px;
+}
+
+/* Product Name */
+
+.popular-product-name {
+  margin: 0;
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Product Prices */
+
+.popular-product-price-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.popular-product-price {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.popular-product-old-price {
+  color: #9ca3af;
+  font-size: 15px;
+  text-decoration: line-through;
+}
+
+/* =========================================
+   EMPTY PRODUCT LIST
+========================================= */
+
+.popular-products-empty {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 30px 15px;
+
+  color: #6b7280;
+  font-size: 16px;
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   VIEW MORE BUTTON
+========================================= */
+
+.popular-products-view-more {
+  margin-top: 64px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.popular-products-view-link {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 999px;
+
+  background-color: #f97316;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.popular-products-view-link:hover {
+  background-color: #ea580c;
+  transform: translateY(-2px);
+}
+
+.popular-products-view-link:focus-visible {
+  outline: 3px solid #fb923c;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .popular-products-section {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .popular-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .popular-product-card {
+    padding: 20px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .popular-products-section {
+    padding: 48px 20px 0;
+  }
+
+  .popular-products-title {
+    font-size: 28px;
+  }
+
+  .popular-products-divider {
+    margin: 28px auto;
+  }
+
+  .popular-products-description {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .popular-products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .popular-product-card {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 18px;
+  }
+
+  .popular-product-image-wrapper {
+    min-height: 170px;
+  }
+
+  .popular-product-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .popular-product-no-image {
+    min-height: 160px;
+  }
+
+  /* Keep Add to Cart Visible on Mobile */
+
+  .popular-product-overlay {
+    position: static;
+    min-height: 44px;
+    margin-top: 12px;
+
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .popular-product-cart-button {
+    width: 100%;
+    max-width: 220px;
+    padding: 11px 14px;
+  }
+
+  .popular-product-details {
+    margin: 16px 0 5px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+  .popular-products-section {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .popular-products-title {
+    font-size: 25px;
+  }
+
+  .popular-product-card {
+    padding: 14px;
+  }
+
+  .popular-product-name {
+    font-size: 15px;
+  }
+
+  .popular-product-price {
+    font-size: 18px;
+  }
+}
+/* =========================================
+   HOMEPAGE POPULAR PRODUCTS CAROUSEL
+========================================= */
+
+.popular-products-carousel {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 8px 0 0;
+  box-sizing: border-box;
+}
+
+.popular-products-swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 4px 48px;
+  box-sizing: border-box;
+}
+
+.popular-products-swiper .swiper-slide {
+  display: flex;
+  align-items: stretch;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.popular-products-swiper .popular-product-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
+.popular-products-swiper .popular-product-image-wrapper {
+  flex-shrink: 0;
+}
+
+.popular-products-swiper .popular-product-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular-products-swiper .popular-product-role {
+  margin: 7px 0 4px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.popular-products-swiper .popular-product-price-wrapper {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.popular-products-swiper .swiper-pagination {
+  bottom: 8px !important;
+}
+
+.popular-products-swiper .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background: #9ca3af;
+  opacity: 1;
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.popular-products-swiper .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 10px;
+  background: #ea580c;
+}
+
+.popular-products-view-more {
+  margin: 28px auto 0;
+  padding: 15px 0 10px;
+  text-align: center;
+}
+
+.popular-products-view-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 145px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: #f97316;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.popular-products-view-link:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+}
+
+.popular-products-view-link:focus-visible {
+  outline: 3px solid #fb923c;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .popular-products-section {
+    padding: 48px 18px 28px;
+  }
+
+  .popular-products-carousel {
+    padding-top: 4px;
+  }
+
+  .popular-products-swiper {
+    padding-bottom: 42px;
+  }
+
+  .popular-products-view-more {
+    margin-top: 18px;
+  }
+}

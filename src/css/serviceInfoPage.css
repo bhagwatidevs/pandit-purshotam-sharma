@@ -1,0 +1,48 @@
+.service-info-page {
+  min-height: 58vh;
+  display: grid;
+  place-items: center;
+  padding: 45px 20px;
+  background: #fff9f8;
+  color: #172033;
+}
+
+.service-info-card {
+  width: min(100%, 800px);
+  padding: clamp(25px, 5vw, 48px);
+  border: 1px solid #f0dddd;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 14px 35px rgba(80, 20, 20, 0.08);
+  text-align: center;
+}
+
+.service-info-card h1 {
+  margin: 0 0 18px;
+  color: #a91e22;
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.2;
+}
+
+.service-info-card p:not(.form-eyebrow) {
+  max-width: 640px;
+  margin: 0 auto 26px;
+  color: #5e5e5e;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.service-info-cta {
+  display: inline-flex;
+  padding: 13px 22px;
+  border-radius: 8px;
+  background: #a91e22;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.service-info-cta:hover {
+  background: #81181b;
+}

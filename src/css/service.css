@@ -1,0 +1,343 @@
+
+/* ==============================
+   ASTROLOGY SERVICES SECTION
+================================ */
+
+.astrology-services {
+  width: 100%;
+  padding: 65px 20px 75px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.astrology-services *,
+.astrology-services *::before,
+.astrology-services *::after {
+  box-sizing: border-box;
+}
+
+/* Section heading */
+
+.astrology-services__heading {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.astrology-services__title {
+  margin: 0;
+  color: #171717;
+  font-size: 38px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.astrology-services__decoration {
+  display: block;
+  width: 150px;
+  max-width: 60%;
+  height: auto;
+  margin: 22px auto;
+  object-fit: contain;
+}
+
+.astrology-services__intro {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #606060;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* Slider container */
+
+.astrology-services__slider {
+  width: 100%;
+  max-width: 1600px;
+  margin-left: 10px;
+  margin-right: 0;
+  padding: 10px 5px 25px;
+  box-sizing: border-box;
+}
+
+.astrology-services__swiper {
+  width: 100%;
+  padding: 10px 5px 25px;
+}
+
+.astrology-services__slide {
+  display: flex;
+  height: auto;
+  align-items: stretch;
+}
+
+/* Service card */
+
+.astrology-services__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  padding: 28px 24px;
+  overflow: hidden;
+
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.045);
+
+  text-align: center;
+  transition:
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.astrology-services__card:hover {
+  background-color: #ca8a04;
+  border-color: #ca8a04;
+  box-shadow: 0 12px 30px rgba(202, 138, 4, 0.22);
+  transform: translateY(-5px);
+}
+
+/* Service image */
+
+.astrology-services__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.astrology-services__image {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+
+  transition: transform 0.5s ease;
+}
+
+.astrology-services__card:hover .astrology-services__image {
+  transform: scale(1.06);
+}
+
+/* Card title */
+
+.astrology-services__card-title {
+  width: 100%;
+  margin: 0 0 12px;
+
+  color: #202020;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+.astrology-services__card:hover .astrology-services__card-title {
+  color: #ffffff;
+}
+
+/* Card description */
+
+.astrology-services__description {
+  flex-grow: 1;
+  margin: 0 0 20px;
+
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  transition: color 0.3s ease;
+}
+
+.astrology-services__card:hover .astrology-services__description {
+  color: #ffffff;
+}
+
+/* Read More link */
+
+.astrology-services__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: auto;
+  padding: 4px 0;
+
+  color: #202020;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.astrology-services__link span {
+  font-size: 23px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.astrology-services__link:hover {
+  gap: 14px;
+}
+
+.astrology-services__link:hover span {
+  transform: translateX(3px);
+}
+
+.astrology-services__card:hover .astrology-services__link {
+  color: #ffffff;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+================================ */
+
+@media (max-width: 1023px) {
+  .astrology-services {
+    padding: 55px 20px 65px;
+  }
+
+  .astrology-services__heading {
+    margin-bottom: 32px;
+  }
+
+  .astrology-services__title {
+    font-size: 34px;
+  }
+
+  .astrology-services__intro {
+    max-width: 760px;
+    font-size: 15px;
+  }
+
+  .astrology-services__card {
+    min-height: 410px;
+    padding: 25px 20px;
+  }
+
+  .astrology-services__image {
+    max-width: 270px;
+  }
+
+  .astrology-services__card-title {
+    font-size: 19px;
+  }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 639px) {
+  .astrology-services {
+    padding: 42px 16px 48px;
+  }
+
+  .astrology-services__heading {
+    margin-bottom: 25px;
+  }
+
+  .astrology-services__title {
+    font-size: 29px;
+  }
+
+  .astrology-services__decoration {
+    width: 125px;
+    margin: 17px auto;
+  }
+
+  .astrology-services__intro {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .astrology-services__slider {
+    padding: 0;
+  }
+
+  .astrology-services__swiper {
+    padding: 5px 2px 15px;
+  }
+
+  .astrology-services__card {
+    min-height: 0;
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .astrology-services__image-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .astrology-services__image {
+    max-width: 280px;
+  }
+
+  .astrology-services__card-title {
+    margin-bottom: 10px;
+    font-size: 19px;
+  }
+
+  .astrology-services__description {
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
+
+  .astrology-services__link {
+    font-size: 14px;
+  }
+}
+
+/* Small mobile devices */
+
+@media (max-width: 380px) {
+  .astrology-services {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .astrology-services__title {
+    font-size: 26px;
+  }
+
+  .astrology-services__card {
+    padding: 20px 16px;
+  }
+
+  .astrology-services__image {
+    max-width: 240px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .astrology-services__card,
+  .astrology-services__image,
+  .astrology-services__link,
+  .astrology-services__link span {
+    transition: none;
+  }
+}

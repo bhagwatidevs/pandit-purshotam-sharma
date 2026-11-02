@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+
+/* Route fallback page */
+.not-found-page {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  text-align: center;
+  color: #172033;
+  background: #fff9f8;
+}
+.not-found-code {
+  margin: 0;
+  color: #a91e22;
+  font-size: clamp(4rem, 12vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+}
+.not-found-page h1 { margin: 16px 0 8px; font-size: clamp(1.8rem, 5vw, 2.5rem); }
+.not-found-page p:not(.not-found-code) { margin: 0 0 22px; }
+.not-found-home {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #a91e22;
+  color: #fff;
+  text-decoration: none;
+}
+.not-found-home:hover { background: #80171a; }

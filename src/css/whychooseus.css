@@ -1,0 +1,210 @@
+/* Main Section */
+.why-choose-section {
+  width: 100%;
+  overflow: hidden;
+  background-image: var(--why-bg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Decorative Shapes */
+.why-choose-shape {
+  width: 100%;
+  height: 100px;
+  background-image: var(--why-shape);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.why-choose-shape-top {
+  margin-bottom: 0;
+}
+
+.why-choose-shape-bottom {
+  margin-top: 0;
+  transform: rotate(180deg);
+}
+
+/* Heading Section */
+.why-choose-heading {
+  padding: 0 40px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.why-choose-heading h2 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.why-choose-divider {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 40px auto;
+  object-fit: contain;
+}
+
+.why-choose-heading > p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* Reasons Grid */
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 40px;
+  padding: 48px 40px 64px;
+}
+
+/* Individual Card */
+.why-choose-card {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Circular Images */
+.why-choose-image {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.why-choose-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Text */
+.why-choose-card-text {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+.why-choose-card-text h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.why-choose-card-text p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.why-choose-card-text:hover {
+  color: #facc15;
+}
+
+/* Large Tablets */
+@media (max-width: 1100px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .why-choose-heading {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .why-choose-heading h2 {
+    font-size: 32px;
+  }
+
+  .why-choose-divider {
+    margin: 30px auto;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 24px;
+    padding: 40px 24px 50px;
+  }
+
+  .why-choose-image {
+    width: 145px;
+    height: 145px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .why-choose-shape {
+    height: 65px;
+    background-size: contain;
+  }
+
+  .why-choose-heading {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .why-choose-heading h2 {
+    font-size: 28px;
+  }
+
+  .why-choose-divider {
+    margin: 24px auto;
+  }
+
+  .why-choose-heading > p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 35px 20px 45px;
+  }
+
+  .why-choose-card {
+    max-width: 320px;
+  }
+
+  .why-choose-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .why-choose-card-text {
+    margin-top: 16px;
+  }
+
+  .why-choose-card-text h3 {
+    font-size: 16px;
+  }
+
+  .why-choose-card-text p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,380 @@
+/* ========================================
+   TESTIMONIALS SECTION
+======================================== */
+
+.testimonials-section {
+  width: 100%;
+  padding-top: 64px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.testimonials-heading {
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.testimonials-title {
+  margin: 0;
+  color: #222222;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.testimonials-divider {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 40px auto;
+  object-fit: contain;
+}
+
+.testimonials-description {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #444444;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.testimonials-subdescription {
+  max-width: 900px;
+  margin: 12px auto 0;
+  color: #555555;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   TESTIMONIALS BACKGROUND
+======================================== */
+
+.testimonials-content {
+  width: 100%;
+  margin-top: 0;
+  padding: 64px 24px;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #fff7ed 100%
+  );
+  box-sizing: border-box;
+}
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   CUSTOMER PHOTOS
+======================================== */
+
+.testimonials-people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  width: 100%;
+}
+
+/* Remove Default Button Styles */
+
+.testimonial-avatar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Customer Avatar */
+
+.testimonial-avatar {
+  display: block;
+  width: 80px;
+  height: 80px;
+
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  object-fit: cover;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Active Customer */
+
+.testimonial-avatar-button.is-active {
+  transform: scale(1.08);
+}
+
+.testimonial-avatar-button.is-active .testimonial-avatar {
+  border-color: #f97316;
+  box-shadow: 0 6px 18px rgba(249, 115, 22, 0.3);
+}
+
+/* Inactive Customer Hover */
+
+.testimonial-avatar-button:not(.is-active):hover .testimonial-avatar {
+  transform: scale(1.05);
+  border-color: #fed7aa;
+}
+
+/* Keyboard Accessibility */
+
+.testimonial-avatar-button:focus-visible {
+  outline: 3px solid #f97316;
+  outline-offset: 5px;
+}
+
+/* ========================================
+   REVIEW CARD
+======================================== */
+
+.testimonial-review-card {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  padding: 40px;
+
+  overflow: hidden;
+  border-radius: 24px;
+
+  background: linear-gradient(
+    to bottom,
+    #fb923c 0%,
+    #f97316 100%
+  );
+
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(194, 65, 12, 0.15);
+  box-sizing: border-box;
+}
+
+/* Review Text */
+
+.testimonial-review-text {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 24px;
+
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+/* Customer Name */
+
+.testimonial-review-name {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Customer Role */
+
+.testimonial-review-role {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Decorative Overlay */
+
+.testimonial-card-decoration {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 100% 0%,
+    rgba(255, 255, 255, 0.18),
+    transparent 45%
+  );
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (min-width: 768px) {
+  .testimonials-section {
+    padding-top: 80px;
+  }
+
+  .testimonials-content {
+    padding: 64px 24px;
+  }
+
+  .testimonials-review-card {
+    padding: 40px;
+  }
+
+  .testimonial-avatar {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+/* ========================================
+   DESKTOP RESPONSIVE
+======================================== */
+
+@media (min-width: 1024px) {
+  .testimonials-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .testimonials-people {
+    width: 50%;
+    flex: 1;
+  }
+
+  .testimonial-review-card {
+    width: 50%;
+    flex: 1;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+  .testimonials-section {
+    padding-top: 48px;
+  }
+
+  .testimonials-heading {
+    padding: 0 18px;
+  }
+
+  .testimonials-title {
+    font-size: 28px;
+  }
+
+  .testimonials-divider {
+    margin: 26px auto;
+  }
+
+  .testimonials-description,
+  .testimonials-subdescription {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .testimonials-content {
+    padding: 40px 18px;
+  }
+
+  .testimonials-container {
+    gap: 30px;
+  }
+
+  .testimonials-people {
+    gap: 18px;
+  }
+
+  .testimonial-avatar {
+    width: 72px;
+    height: 72px;
+    border-width: 3px;
+  }
+
+  .testimonial-review-card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .testimonial-review-text {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .testimonial-review-name {
+    font-size: 21px;
+  }
+
+  .testimonial-review-role {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Screens */
+
+@media (max-width: 360px) {
+  .testimonials-heading {
+    padding: 0 14px;
+  }
+
+  .testimonials-title {
+    font-size: 25px;
+  }
+
+  .testimonials-people {
+    gap: 12px;
+  }
+
+  .testimonial-avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .testimonial-review-card {
+    padding: 20px;
+  }
+
+  .testimonial-review-name {
+    font-size: 19px;
+  }
+}

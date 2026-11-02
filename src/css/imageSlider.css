@@ -1,0 +1,194 @@
+/* =====================================
+   IMAGE SLIDER SECTION
+===================================== */
+
+.image-slider-section {
+  width: 100%;
+  padding: 40px 0;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+
+.image-slider-container {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Swiper Main */
+
+.astrology-image-swiper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+}
+
+/* Each Slide */
+
+.astrology-image-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Image Wrapper */
+
+.image-slider-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Slider Images */
+
+.image-slider-photo {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Image Hover Effect */
+
+.image-slider-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* =====================================
+   SWIPER NAVIGATION BUTTONS
+===================================== */
+
+.astrology-image-swiper .swiper-button-next,
+.astrology-image-swiper .swiper-button-prev {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #ea580c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.astrology-image-swiper .swiper-button-next:hover,
+.astrology-image-swiper .swiper-button-prev:hover {
+  background-color: #ea580c;
+  color: #ffffff;
+}
+
+.astrology-image-swiper .swiper-button-next::after,
+.astrology-image-swiper .swiper-button-prev::after {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* =====================================
+   SWIPER PAGINATION
+===================================== */
+
+.astrology-image-swiper .swiper-pagination {
+  bottom: 5px;
+}
+
+.astrology-image-swiper .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background-color: #9ca3af;
+  opacity: 1;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.astrology-image-swiper .swiper-pagination-bullet-active {
+  width: 22px;
+  border-radius: 10px;
+  background-color: #ea580c;
+}
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+  .image-slider-section {
+    padding: 32px 0;
+  }
+
+  .image-slider-container {
+    padding: 0 20px;
+  }
+
+  .image-slider-photo {
+    max-width: 100%;
+    height: 280px;
+  }
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 480px) {
+  .image-slider-section {
+    padding: 25px 0;
+  }
+
+  .image-slider-container {
+    padding: 0 16px;
+  }
+
+  .astrology-image-swiper {
+    border-radius: 12px;
+  }
+
+  .image-slider-photo {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    border-radius: 12px;
+  }
+
+  .astrology-image-swiper .swiper-button-next,
+  .astrology-image-swiper .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+  }
+
+  .astrology-image-swiper .swiper-button-next::after,
+  .astrology-image-swiper .swiper-button-prev::after {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile Screens */
+
+@media (max-width: 360px) {
+  .image-slider-container {
+    padding: 0 12px;
+  }
+
+  .image-slider-photo {
+    height: 220px;
+  }
+}

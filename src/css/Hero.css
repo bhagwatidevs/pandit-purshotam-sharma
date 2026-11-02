@@ -1,0 +1,445 @@
+
+/* =================================
+   PREMIUM HERO SECTION
+================================= */
+
+.hero-banner {
+  width: 100%;
+  min-height: 650px;
+  height: 85vh;
+  max-height: 500px;
+  position: relative;
+  overflow: hidden;
+  background: #120d18;
+}
+
+/* =================================
+   BACKGROUND VIDEO
+================================= */
+
+.hero-banner__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* =================================
+   HERO OVERLAY
+================================= */
+
+.hero-banner__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 4%;
+  padding-right: 4%;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* =================================
+   GOLDEN AMBIENT GLOW
+================================= */
+
+.hero-banner__overlay::before {
+  content: "";
+  position: absolute;
+
+  left: 2%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(218, 166, 91, 0.20) 0%,
+    rgba(181, 123, 56, 0.10) 40%,
+    transparent 72%
+  );
+
+  filter: blur(30px);
+  z-index: -1;
+}
+
+/* =================================
+   LEFT SIDE IMAGE
+================================= */
+
+.hero-banner__image {
+  width: clamp(320px, 42vw, 570px);
+
+  max-height: 85%;
+  height: auto;
+
+  object-fit: contain;
+  display: block;
+
+  position: relative;
+  z-index: 2;
+
+  flex-shrink: 0;
+
+  filter:
+    drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35))
+    drop-shadow(0 0 18px rgba(218, 166, 91, 0.20));
+
+  animation:
+    heroImageAppear 1.2s ease-out both,
+    heroImageFloat 5s ease-in-out 1.2s infinite;
+}
+
+/* =================================
+   RIGHT SIDE TEXT CONTENT
+================================= */
+
+.hero-banner__content {
+  width: 30%;
+  max-width: 450px;
+
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  text-align: left;
+
+  animation: heroTextAppear 1.2s ease-out both;
+}
+
+/* Small Heading */
+
+.hero-banner__eyebrow {
+  color: #e5bc78;
+
+  font-size: clamp(13px, 1.2vw, 17px);
+
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  margin: 0 0 18px;
+}
+
+/* =================================
+   HINDI NAME
+================================= */
+
+.hero-banner__hindi {
+  color: #f8e5bd;
+
+  font-family:
+    "Noto Serif Devanagari",
+    "Mangal",
+    serif;
+
+  font-size: clamp(30px, 3.5vw, 50px);
+
+  font-weight: 700;
+  line-height: 1.55;
+
+  margin: 0;
+
+  text-shadow:
+    0 3px 15px rgba(0, 0, 0, 0.55),
+    0 0 20px rgba(218, 166, 91, 0.20);
+}
+
+.hero-banner__hindi span {
+  display: block;
+
+  color: #d9a957;
+
+  font-size: 0.8em;
+
+  margin-top: 3px;
+}
+
+/* =================================
+   GOLDEN DIVIDER
+================================= */
+
+.hero-banner__divider {
+  width: 105px;
+  height: 3px;
+
+  margin: 22px 0;
+
+  border-radius: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #f8d28a,
+    #b77a34,
+    transparent
+  );
+
+  box-shadow: 0 0 12px rgba(218, 166, 91, 0.35);
+}
+
+/* =================================
+   ENGLISH NAME
+================================= */
+
+.hero-banner__english {
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(22px, 2.5vw, 35px);
+
+  font-weight: 600;
+  line-height: 1.4;
+
+  margin: 0;
+
+  text-shadow:
+    0 3px 15px rgba(0, 0, 0, 0.65);
+}
+
+.hero-banner__english span {
+  display: block;
+
+  color: #e1b66d;
+
+  font-size: 0.8em;
+
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+
+/* =================================
+   IMAGE ENTRANCE ANIMATION
+   SAME AS ORIGINAL
+================================= */
+
+@keyframes heroImageAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-70px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* =================================
+   IMAGE FLOATING ANIMATION
+================================= */
+
+@keyframes heroImageFloat {
+  0%, 100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -10px;
+  }
+}
+
+/* =================================
+   RIGHT SIDE TEXT ANIMATION
+   SAME DISTANCE - OPPOSITE DIRECTION
+================================= */
+
+@keyframes heroTextAppear {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =================================
+   LARGE SCREEN
+================================= */
+
+@media (min-width: 1400px) {
+
+  .hero-banner__overlay {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .hero-banner__image {
+    width: 400px;
+  }
+
+  .hero-banner__content {
+    width: 42%;
+  }
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1024px) {
+
+  .hero-banner {
+    height: 650px;
+    min-height: 550px;
+  }
+
+  .hero-banner__overlay {
+    padding-left: 5%;
+    padding-right: 4%;
+    gap: 15px;
+  }
+
+  .hero-banner__image {
+    width: 48%;
+  }
+
+  .hero-banner__content {
+    width: 43%;
+  }
+
+  .hero-banner__hindi {
+    font-size: clamp(25px, 3.5vw, 38px);
+  }
+
+  .hero-banner__english {
+    font-size: clamp(18px, 2.5vw, 26px);
+  }
+
+  .hero-banner__eyebrow {
+    letter-spacing: 1px;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 767px) {
+
+  .hero-banner {
+    height: 520px;
+    min-height: 450px;
+  }
+
+  .hero-banner__overlay {
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 10px;
+  }
+
+  .hero-banner__overlay::before {
+    width: 350px;
+    height: 350px;
+    left: -10%;
+  }
+
+  .hero-banner__image {
+    width: 43%;
+    max-width: 380px;
+    max-height: 80%;
+  }
+
+  .hero-banner__content {
+    width: 54%;
+  }
+
+  .hero-banner__eyebrow {
+    font-size: 10px;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-banner__hindi {
+    font-size: clamp(19px, 4.5vw, 28px);
+    line-height: 1.6;
+  }
+
+  .hero-banner__hindi span {
+    font-size: 0.8em;
+  }
+
+  .hero-banner__divider {
+    width: 60px;
+    margin: 14px 0;
+  }
+
+  .hero-banner__english {
+    font-size: clamp(14px, 3.5vw, 21px);
+    line-height: 1.5;
+  }
+
+  .hero-banner__english span {
+    font-size: 0.8em;
+    letter-spacing: 1px;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+  .hero-banner {
+    height: 430px;
+    min-height: 400px;
+  }
+
+  .hero-banner__image {
+    width: 40%;
+  }
+
+  .hero-banner__content {
+    width: 57%;
+  }
+
+  .hero-banner__hindi {
+    font-size: 19px;
+  }
+
+  .hero-banner__english {
+    font-size: 14px;
+  }
+
+  .hero-banner__eyebrow {
+    font-size: 9px;
+  }
+
+  .hero-banner__divider {
+    margin: 10px 0;
+  }
+}
+
+/* =================================
+   REDUCED MOTION ACCESSIBILITY
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-banner__image {
+    animation: none;
+  }
+
+  .hero-banner__content {
+    animation: none;
+  }
+}
